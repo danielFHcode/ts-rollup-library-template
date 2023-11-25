@@ -1,0 +1,25 @@
+{
+    "name": "package-name",
+    "version": "1.0.0",
+    "main": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "build": "rollup --config",
+        "dev": "rollup --config --watch"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.23.3",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^25.0.7",
+        "@rollup/plugin-json": "^6.0.1",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-typescript": "^11.1.5",
+        "rollup": "^4.5.2",
+        "rollup-plugin-dts": "^6.1.0",
+        "tslib": "^2.6.2"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}
