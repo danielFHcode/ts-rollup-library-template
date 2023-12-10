@@ -4,7 +4,7 @@ import packageConfig from './package.json' assert { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
 import babel from '@rollup/plugin-babel';
 // compatibility with older packages
-import resolve from '@rollup/plugin-node-resolve';
+import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 // types
@@ -31,7 +31,7 @@ export default defineConfig([
                     .replace(/[-/][A-z]/g, (word) => word[1].toUpperCase()), // convert "@some/package-name@1.0.0" to more js friendly "somePackageName1_0_0"
             },
         ],
-        plugins: [typescript(), babel(), resolve(), commonjs(), json()],
+        plugins: [typescript(), babel(), nodeResolve(), commonjs(), json()],
     },
     {
         input: 'src/index.ts',
